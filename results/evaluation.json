@@ -1,0 +1,30 @@
+{
+  "prompt": "A traveler arrived at the observatory with a question.",
+  "checkpoint": "fine-tuned local DistilGPT-2",
+  "train_chars": 3921,
+  "held_out_chars": 693,
+  "settings": {
+    "seed": 7,
+    "temperature": 0.8,
+    "top_k": 40,
+    "gpt_new_tokens": 100,
+    "lstm_new_chars": 240
+  },
+  "metrics": {
+    "lstm_character_perplexity": 9.816009527343486,
+    "distilgpt2_subword_perplexity": 44.320980072021484,
+    "lstm_bert_nsp_isnext": 0.00036358035868033767,
+    "distilgpt2_bert_nsp_isnext": 0.9994962215423584,
+    "lstm_longest_exact_overlap_chars": 0,
+    "distilgpt2_longest_exact_overlap_chars": 0
+  },
+  "outputs": {
+    "lstm": "A traveler arrived at the observatory with a question.\n\n\nThe emas llilit She whilg asse porad silighe dirg a yad then willen hed send res a and thind tha fulit thy mlessople. The She ald reasor sefor,. mh herd and ghe shermils Shillg at ligha teat sorled ing marel thee shed mo lolg the heare n",
+    "distilgpt2": "A traveler arrived at the observatory with a question. She seemed to agree with the question.\n\n\nThey turned to the sky. The two groups looked to each other on the same map.\nThe light shone a bright light. A bright light would light the light.\nThe stars began to light up.\nThe two groups could not see the sky. They could not see the sky. They couldn't see a person. The light had to change as they moved.\nThe sky changed. The stars had to change.\nThe light"
+  },
+  "overlap_examples": {
+    "lstm": "",
+    "distilgpt2": ""
+  },
+  "limitations": "Perplexity units differ (characters vs subwords); BERT NSP is a proxy, not human coherence or fact verification."
+}
