@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.py[cod]
+.streamlit/secrets.toml
+models/
+*.log
+16_Atharv_Gawali_P16.pdf
+REPORT_DRAFT.md
+16_Atharv_Gawali/
+output/pdf/
+*.docx
+*.zip
+scripts/create_report.py
+
