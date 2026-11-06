@@ -1,0 +1,5 @@
+Metric,LSTM,DistilGPT-2,Notes
+Perplexity,9.8160,44.3210,Character vs subword; not directly comparable
+BERT NSP IsNext,0.0004,0.9995,Coherence proxy
+Longest exact overlap (chars),0,0,Manual review required
+
