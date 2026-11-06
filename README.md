@@ -1,14 +1,3 @@
----
-title: P16 LSTM vs Transformer Coherence Test
-emoji: 🧪
-colorFrom: blue
-colorTo: indigo
-sdk: streamlit
-sdk_version: 1.40.2
-app_file: app.py
-pinned: false
----
-
 # P16: LSTM vs Transformer Coherence Test
 
 An individual Generative AI mini-project comparing a character-level Keras LSTM with fine-tuned DistilGPT-2 on one shared teaching corpus. The Streamlit app generates continuations, measures perplexity, scores next-sentence coherence with BERT NSP, reads an output with TTS, and screens for exact training-text overlap.
@@ -37,9 +26,18 @@ The first comparison downloads DistilGPT-2 and fine-tunes it for one epoch if `m
 - Document one failure case with its prompt, screenshot, and analysis.
 - Run `python scripts/evaluate.py` after training to write `results/evaluation.json` and `results/metrics.csv`.
 
-## Deployment
+## Deployment (recommended): Streamlit Community Cloud
 
-Create a **Streamlit** Hugging Face Space, upload this repository, and use `requirements.txt`. Add no secrets unless you add a private inference API. First load downloads model weights and may take several minutes; a free CPU instance may need a smaller model/cache strategy. Add the public Space and GitHub URLs to the report and demo.
+1. Sign in at [share.streamlit.io](https://share.streamlit.io/) using GitHub and authorize access to public repositories.
+2. Choose **Create app** → **Yup, I have an app**.
+3. Select repository `atharvgawali23/GENAI`, branch `main`, and entrypoint `app.py`.
+4. Leave Secrets empty; this app has no API keys. Community Cloud installs packages from the root `requirements.txt`.
+5. Click **Deploy** and wait for the build. On the first comparison the app downloads DistilGPT-2 and fine-tunes it; the first run may take several minutes.
+6. Save the public `.streamlit.app` URL for the report and demo.
+
+If the build or first comparison fails, open the app's logs and check for dependency or memory errors. The model stack is heavy for free CPU hosting; do not commit trained weights or credentials to GitHub.
+
+Hugging Face Spaces is another course-approved option. Hugging Face currently deprecates its built-in Streamlit SDK for new Spaces; use its Docker SDK with the Streamlit template rather than creating a new Space with `sdk: streamlit` metadata.
 
 ## Project layers
 
